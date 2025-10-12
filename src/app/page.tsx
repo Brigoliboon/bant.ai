@@ -14,8 +14,6 @@ import { OfflineModeIndicator } from "./components/OfflineModeIndicator";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
-import { Progress } from "./components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { ScrollArea } from "./components/ui/scroll-area";
 import {
   Mic,
@@ -25,10 +23,8 @@ import {
   Users,
   Globe,
   TrendingUp,
-  Calendar,
   Clock,
   AlertTriangle,
-  CheckCircle2,
   Eye,
   BarChart3,
   Satellite,
@@ -96,12 +92,13 @@ const mockThreatAssessment: ThreatAssessment = {
   lastUpdated: "1 min ago"
 };
 
-const mockResourceStatus: ResourceStatus = {
-  emergencyTeams: { deployed: 8, available: 4, responding: 3 },
-  vehicles: { ambulances: 5, firetrucks: 3, rescue: 2 },
-  shelters: { capacity: 500, occupied: 120, available: 380 },
-  supplies: { food: 85, water: 92, medical: 78 }
-};
+// Resource status data - will be used in future components
+// const mockResourceStatus: ResourceStatus = {
+//   emergencyTeams: { deployed: 8, available: 4, responding: 3 },
+//   vehicles: { ambulances: 5, firetrucks: 3, rescue: 2 },
+//   shelters: { capacity: 500, occupied: 120, available: 380 },
+//   supplies: { food: 85, water: 92, medical: 78 }
+// };
 
 const mockWeatherStations: WeatherStation[] = [
   {
@@ -147,7 +144,7 @@ function DesktopApp() {
   const [isVoiceBotOpen, setIsVoiceBotOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isOnline, setIsOnline] = useState(true);
-  const [offlineData, setOfflineData] = useState([]);
+  const [offlineData] = useState([]);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
