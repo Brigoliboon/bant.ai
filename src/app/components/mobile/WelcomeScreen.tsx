@@ -94,7 +94,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
             <CheckCircle className="h-10 w-10 text-white" />
           </motion.div>
           <h2 className="text-xl text-white mb-2">Welcome to SentinelX!</h2>
-          <p className="text-muted-foreground">You'll receive alerts for your area</p>
+          <p className="text-muted-foreground">You&apos;ll receive alerts for your area</p>
         </motion.div>
       </div>
     );
@@ -227,7 +227,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
                   <div className="flex items-start gap-2 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
                     <AlertTriangle className="h-4 w-4 text-amber-400 flex-shrink-0 mt-0.5" />
                     <p className="text-xs text-amber-200">
-                      You'll receive emergency alerts for your area. Standard message rates may apply.
+                      You&apos;ll receive emergency alerts for your area. Standard message rates may apply.
                     </p>
                   </div>
 

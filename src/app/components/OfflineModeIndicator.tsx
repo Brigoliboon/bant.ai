@@ -16,7 +16,7 @@ import {
 interface OfflineData {
   id: string;
   type: "sensor_reading" | "community_report" | "alert" | "prediction";
-  data: any;
+  data: Record<string, unknown>;
   timestamp: Date;
   synced: boolean;
 }

@@ -148,7 +148,7 @@ const getConnectivityIcon = (status: string) => {
   }
 };
 
-const getRiskLevel = (value: number, threshold: any) => {
+const getRiskLevel = (value: number, threshold: { critical: number; warning: number }) => {
   if (value >= threshold.critical) return "critical";
   if (value >= threshold.warning) return "warning";
   return "normal";
