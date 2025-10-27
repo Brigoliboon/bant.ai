@@ -134,7 +134,7 @@ const mockTimeline = [
   { id: 1, time: "14:32", event: "Flash flood alert issued for Central Valley", severity: "high", type: "flood" },
   { id: 2, time: "14:15", event: "Heatwave warning updated for Metropolitan Area", severity: "medium", type: "heat" },
   { id: 3, time: "13:58", event: "Misinformation detected: False evacuation order", severity: "low", type: "info" },
-  { id: 4, time: "13:45", event: "Satellite thermal anomaly in Northern Districts", severity: "critical", type: "fire" },
+  { id: 4, time: "13:45", event: "Landslide risk detected in Northern Districts - heavy rain and soil saturation", severity: "critical", type: "fire" },
   { id: 5, time: "13:30", event: "Community report verified: Road flooding on Highway 101", severity: "medium", type: "flood" },
 ];
 
