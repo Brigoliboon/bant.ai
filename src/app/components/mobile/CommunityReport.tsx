@@ -15,8 +15,6 @@ import {
   CheckCircle,
   AlertTriangle,
   Waves,
-  Thermometer,
-  Zap,
   Users,
   Clock,
   Filter,
@@ -58,9 +56,9 @@ const mockReports: Report[] = [
   },
   {
     id: "2",
-    title: "Extreme heat affecting elderly",
-    description: "Multiple elderly residents showing signs of heat exhaustion at community center.",
-    category: "heat",
+    title: "Heavy rainfall causing street flooding",
+    description: "Heavy downpour flooding main street, affecting traffic and businesses.",
+    category: "rain",
     location: "Sunset Community Center",
     timestamp: new Date(Date.now() - 30 * 60 * 1000),
     status: "verified",
@@ -84,8 +82,8 @@ const mockReports: Report[] = [
 
 const reportCategories = [
   { value: "flood", label: "Flooding", icon: Waves, color: "blue" },
-  { value: "heat", label: "Heat Emergency", icon: Thermometer, color: "orange" },
-  { value: "fire", label: "Fire/Smoke", icon: Zap, color: "red" },
+  { value: "rain", label: "Heavy Rainfall", icon: Waves, color: "cyan" },
+  { value: "landslide", label: "Landslide", icon: AlertTriangle, color: "orange" },
   { value: "misinformation", label: "Misinformation", icon: MessageSquare, color: "purple" },
   { value: "other", label: "Other Emergency", icon: AlertTriangle, color: "yellow" },
 ];

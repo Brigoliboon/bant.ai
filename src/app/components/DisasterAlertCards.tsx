@@ -17,7 +17,7 @@ import {
 
 interface AlertData {
   id: string;
-  type: "flood" | "heatwave" | "misinformation" | "satellite" | "landslide" | "sensor";
+  type: "flood" | "heatwave" | "misinformation" | "satellite" | "landslide" | "sensor" | "rain";
   title: string;
   riskScore: number;
   status: "low" | "medium" | "high" | "critical";
@@ -102,22 +102,22 @@ const mockAlertData: AlertData[] = [
     aiPrediction: 45
   },
   {
-    id: "sat-001",
-    type: "satellite",
-    title: "Orbital Analysis: Thermal Anomaly",
+    id: "landslide-002",
+    type: "landslide",
+    title: "Satellite Analysis: Landslide Risk",
     riskScore: 89,
     status: "critical",
     location: "Barangay Northern District",
     lastUpdated: "30 secs ago",
-    prediction: "Thermal anomaly detected - possible fire risk",
+    prediction: "High landslide risk detected - soil saturation critical",
     confidence: 95,
     trend: "up",
-    details: "FIRMS data shows multiple heat sources, possible wildfire",
+    details: "Heavy rainfall 85mm causing soil erosion and slope instability on hillside areas",
     sensorData: {
-      rainfall: 0.5,
-      waterLevel: 0.8,
-      soilMoisture: 45,
-      humidity: 35
+      rainfall: 85.5,
+      waterLevel: 2.1,
+      soilMoisture: 92,
+      humidity: 88
     },
     barangay: "Northern District",
     aiPrediction: 89
@@ -142,6 +142,8 @@ const getStatusColor = (status: string) => {
 const getTypeIcon = (type: string) => {
   switch (type) {
     case "flood":
+      return Waves;
+    case "rain":
       return Waves;
     case "heatwave":
       return Thermometer;

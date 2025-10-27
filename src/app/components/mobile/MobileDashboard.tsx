@@ -45,18 +45,18 @@ const alertData = [
     }
   },
   {
-    id: "heat-001",
-    type: "heat",
-    title: "Heat Stress Alert",
+    id: "rain-001",
+    type: "rain",
+    title: "Heavy Rain Alert",
     region: "Metro Area",
-    riskScore: 45,
+    riskScore: 65,
     status: "medium",
-    trend: "stable",
-    affected: 8900,
+    trend: "up",
+    affected: 12400,
     lastUpdate: "5 mins ago",
-    description: "Temperature 38°C, UV index extreme",
-    icon: Thermometer,
-    color: "orange",
+    description: "Heavy rainfall 45mm/hr, possible flooding in low-lying areas",
+    icon: TrendingUp,
+    color: "blue",
   },
   {
     id: "misinfo-001",
@@ -73,16 +73,16 @@ const alertData = [
     color: "purple",
   },
   {
-    id: "sat-001",
-    type: "satellite",
-    title: "Thermal Anomaly",
+    id: "landslide-001",
+    type: "landslide",
+    title: "Landslide Risk Detection",
     region: "Northern Districts",
     riskScore: 89,
     status: "critical",
     trend: "up",
     affected: 25000,
     lastUpdate: "30 secs ago",
-    description: "Multiple heat sources detected via FIRMS",
+    description: "High landslide risk due to heavy rain and soil saturation",
     icon: Satellite,
     color: "red",
   },
@@ -202,18 +202,18 @@ export function MobileDashboard({ onNavigate }: MobileDashboardProps) {
           </CardContent>
         </Card>
 
-        {/* 3D Heatmap */}
+        {/* Disaster Map View */}
         <Card className="sentinelx-glass border-sentinelx-glass-border">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-white flex items-center gap-2 text-base">
                 <MapPin className="h-4 w-4 text-sentinelx-alert-yellow" />
-                Risk Heatmap
+                Disaster Zones Map
               </CardTitle>
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => onNavigate('heatmap')}
+                onClick={() => onNavigate('map')}
                 className="text-sentinelx-alert-yellow hover:bg-sentinelx-alert-yellow/20"
               >
                 <Eye className="h-4 w-4" />
@@ -221,8 +221,15 @@ export function MobileDashboard({ onNavigate }: MobileDashboardProps) {
             </div>
           </CardHeader>
           <CardContent className="p-0">
-            <div className="h-40">
-              <Spline3D type="heatmap" className="w-full h-full" />
+            <div className="h-40 bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+              {/* Placeholder for actual map integration */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <MapPin className="h-12 w-12 text-sentinelx-alert-yellow mx-auto mb-2 opacity-50" />
+                  <p className="text-white text-sm">Disaster Risk Map</p>
+                  <p className="text-xs text-muted-foreground">Tap to view full map</p>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>

@@ -115,11 +115,12 @@ export function SentinelXSidebar({ activeView, onViewChange, alertCount }: Senti
       <div className="p-6 border-b border-sentinelx-glass-border">
         <div className="flex items-center gap-3 mb-4">
           <div className="relative">
-            <Image width={50} height={50} src={logo} alt="bant.ai logo"/>
+            {/* TODO: Replace src/app/assets/img/logo.png with bant.ai logo */}
+            <Image width={50} height={50} src={logo} alt="Bant.AI logo"/>
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-sentinelx-alert-yellow rounded-full sentinelx-pulse"></div>
           </div>
           <div>
-            <h1 className="text-xl text-white">Bant.AI</h1>
+            <h1 className="text-xl text-white font-bold">Bant.AI</h1>
             <p className="text-sm text-muted-foreground">Disaster Monitoring Platform</p>
           </div>
         </div>

@@ -41,8 +41,8 @@ export function MobileApp() {
   const mockAlertCount = 4;
   const mockActiveAlerts = [
     { id: "1", type: "flood", title: "Flash Flood Risk", severity: "high", region: "Central Valley" },
-    { id: "2", type: "heat", title: "Heat Stress Alert", severity: "medium", region: "Metro Area" },
-    { id: "3", type: "satellite", title: "Thermal Anomaly", severity: "critical", region: "Northern Districts" },
+    { id: "2", type: "rain", title: "Heavy Rain Alert", severity: "medium", region: "Metro Area" },
+    { id: "3", type: "landslide", title: "Landslide Risk Detection", severity: "critical", region: "Northern Districts" },
     { id: "4", type: "misinformation", title: "False Information", severity: "low", region: "Social Networks" },
   ];
 
@@ -62,7 +62,8 @@ export function MobileApp() {
   const getAlertIcon = (type: string) => {
     switch (type) {
       case "flood": return Waves;
-      case "heat": return Thermometer;
+      case "rain": return Waves;
+      case "landslide": return AlertTriangle;
       case "misinformation": return MessageSquareWarning;
       case "satellite": return Satellite;
       default: return AlertTriangle;
@@ -265,14 +266,14 @@ export function MobileApp() {
                 <CardHeader className="pb-3">
                   <CardTitle className="text-white flex items-center gap-2 text-base">
                     <Shield className="h-4 w-4 text-sentinelx-alert-yellow" />
-                    About SentinelX
+                    About Bant.AI
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-sm text-muted-foreground">
                     <p>Version 2.1.0</p>
                     <p className="mt-2">
-                      AI-powered disaster monitoring and alert platform. 
+                      Bant.AI - AI-powered disaster monitoring and alert platform. 
                       Protecting communities through real-time predictions and verified reports.
                     </p>
                   </div>

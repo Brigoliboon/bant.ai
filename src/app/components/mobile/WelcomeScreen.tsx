@@ -29,7 +29,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
 
   const slides = [
     {
-      title: "SentinelX",
+      title: "Bant.AI",
       subtitle: "Disaster Monitoring & Alert Platform",
       description: "Real-time AI-powered disaster prediction and community safety alerts",
       icon: Satellite,
@@ -93,7 +93,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
           >
             <CheckCircle className="h-10 w-10 text-white" />
           </motion.div>
-          <h2 className="text-xl text-white mb-2">Welcome to SentinelX!</h2>
+          <h2 className="text-xl text-white mb-2">Welcome to Bant.AI!</h2>
           <p className="text-muted-foreground">You&apos;ll receive alerts for your area</p>
         </motion.div>
       </div>
@@ -106,7 +106,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
       <div className="p-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Satellite className="h-6 w-6 text-sentinelx-alert-yellow" />
-          <span className="text-lg text-white font-medium">SentinelX</span>
+          <span className="text-lg text-white font-medium">Bant.AI</span>
         </div>
         <div className="flex gap-1">
           {slides.map((_, index) => (
